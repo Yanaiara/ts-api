@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Yanaiara/ts-api/issues"
   },
-  "homepage": "https://github.com/Yanaiara/ts-api#readme"
+  "homepage": "https://github.com/Yanaiara/ts-api#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^3.0.2"
+  }
 }
