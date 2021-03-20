@@ -4,10 +4,16 @@ import { AccountMongoRepository } from './account'
 describe('Account Mongo Repository', () => {
 
     beforeAll(async () => {
-        await MongoHelper.connect(process.env.MONGO_URL)})
+        await MongoHelper.connect(process.env.MONGO_URL)
+    })
 
     afterAll(async () => {
         await MongoHelper.disconnect()
+    })
+
+    beforeEach(async() => {
+        const accountCollection = MongoHelper.getColection('accounts')
+        await accountCollection.deleteMany({})
     })
 
     test('Should return an account on sucess', async () => {
