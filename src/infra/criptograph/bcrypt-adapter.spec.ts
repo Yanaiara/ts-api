@@ -1,5 +1,4 @@
 import bcrypt from 'bcrypt'
-import { resourceUsage } from 'node:process'
 import { BcryptAdapter } from './bcrypt-adapter'
 
 jest.mock('bcrypt', () => ({
